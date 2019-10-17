@@ -10,14 +10,40 @@
     <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
 
     <link href="example.css" type="text/css" rel="stylesheet" />
+    
+   <script type="text/javascript">
+        function change_color(color,tag){
+            var eAll=document.getElementsByTagName(tag);
+            for (var i=0; i<eAll.length;i++){
+                eAll[i].style.color=color;
+            }
+         }
+        function blue(){
+            change_color("blue","p");
+            change_color("blue","h1");
+            change_color("blue", "h2");
+            change_color("blue","ul");
+            change_color("blue", "code");
+        }    
+        function red(){
+            change_color("red","p");
+            change_color("red","h1");
+            change_color("red","h2");
+            change_color("red","ul");
+            change_color("red","code");
+        } 
+    </script>
+    
+ 
 </head>
 
 <body>
-
     <header>
         <h1>Learning to work with SASS</h1>
     </header>
-
+    
+    <button onclick="blue()">Blue</button>
+    <button onclick="red()">Red</button>
     <article>
         <section id="selling-points">
             <h2>A preprocessor allows additional leverage over CSS by providing additional syntax that delivers the following advantages:</h2>
@@ -259,8 +285,7 @@
 
     <footer>
         <h6>&copy; 2019 the entire open-source community</h6>
-    </footer>
-
+    </footer>    
 </body>
 
 </html>
